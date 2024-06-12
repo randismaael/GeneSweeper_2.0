@@ -8,4 +8,4 @@ def iterate_csv_files():
         if filename.endswith('.csv'):
             file_path = os.path.join(csv_folder_path, filename)
             with open(file_path, "r") as file:
-                db = pd.read_csv(file, sep='delimiter', header=None, engine='python')
+                db = pd.read_csv(file, delimiter="\t", header=None, engine='python')
